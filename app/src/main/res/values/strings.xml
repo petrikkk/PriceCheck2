@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PriceCheck2</string>
     <string name="title_activity_save">SaveActivity</string>
+    <string name="title_activity_load">LoadActivity</string>
 </resources>

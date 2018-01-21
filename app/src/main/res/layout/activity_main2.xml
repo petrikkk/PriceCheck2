@@ -30,7 +30,7 @@ android:orientation="vertical">
     <TextView
         android:id="@+id/textViewDetails"
         android:layout_width="fill_parent"
-        android:layout_height="320dp"
+        android:layout_height="280dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -66,6 +66,21 @@ android:orientation="vertical">
         android:layout_marginTop="10dp"
         android:background="@color/cardview_dark_background"
         android:text="Ulož"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#d0d9d7" />
+
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_dark_background"
+        android:text="Načti"
         android:textAlignment="center"
         android:textSize="20dp"
         android:textColor="#d0d9d7" />
