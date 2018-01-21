@@ -12,5 +12,64 @@ android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:background="@drawable/dark_embroidery_repeating"
 android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Detaily:"
+        android:textAlignment="center"
+        android:textColor="#d0d9d7"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textViewDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#d0d9d7"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_dark_background"
+        android:text="Zpět"
+        android:textAlignment="center"
+        android:textColor="#d0d9d7"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_dark_background"
+        android:text="Ulož"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#d0d9d7" />
 </LinearLayout>
+
+
 </LinearLayout>

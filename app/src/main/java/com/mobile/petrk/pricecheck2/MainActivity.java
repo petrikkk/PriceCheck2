@@ -12,54 +12,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 
 
 public class MainActivity extends AppCompatActivity {
-    String BASE_URL = "https://www.bitstamp.net/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
         Button button = findViewById(R.id.button1);
-         button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
-                            .addConverterFactory(GsonConverterFactory.create())
-                            .build();
-                    DataAPI dataAPI = retrofit.create(DataAPI.class);
+                    //vytvoreni instance retrofitu a stazeni dat pres API
+                    RetrofitCreator rc = new RetrofitCreator();
+                    DataAPI dataAPI = rc.getRetrofit().create(DataAPI.class);
                     Call<BtcPrice2> call = dataAPI.getPrice();
                     call.enqueue(new Callback<BtcPrice2>() {
                         @Override
 
                         public void onResponse(Call<BtcPrice2> call, Response<BtcPrice2> response) {
                             BtcPrice2 price = response.body();
-                         //testovaci vypisy
-                            System.out.println(price.getLast());
-                            System.out.println(price.getHigh());
-                            System.out.println(price.getLow());
-
-                         //timestamp
-                            Date date = new Date();
-                            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                            String timestamp = (dateFormat.format(date));
-                         //seskladani vypisu
-
-                            StringBuilder sb = new StringBuilder();
-                            sb.append("Aktuální cena:" + price.getLast() + "\n Denní minimum" + price.getLow() +
-                             "\n Denní maximum: " + price.getHigh() + "\n Objem: " + price.getVolume() + "\n Čas: " +
-                             timestamp);
-
+                            //vypis aktualni ceny do TextView
                             TextView zobrazTextView = (TextView)findViewById(R.id.textView);
-                            zobrazTextView.setText(sb.toString());
-                                                   }
+                            zobrazTextView.setText(price.getLast().toString());
+                        }
 
                         @Override
                         public void onFailure(Call<BtcPrice2> call, Throwable t) {
@@ -71,10 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
          });
-        Button button2 = findViewById(R.id.button2);
+        //tlacitko a jeho listener pro vytvoreni novew aktivity pro vypis detailu
+        Button button2 = findViewById(R.id.button3);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                setContentView(R.layout.activity_main2);
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent);
             }
         });
 

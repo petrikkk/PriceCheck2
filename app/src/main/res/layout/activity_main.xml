@@ -21,23 +21,23 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:text="Cena:"
+            android:text="Aktuální cena:"
             android:textAlignment="center"
-            android:textColor="#CC0000"
+            android:textColor="#d0d9d7"
             android:textSize="20dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="fill_parent"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:textColor="#CC0000"
-            android:textSize="20dp" />
+            android:textColor="#d0d9d7"
+            android:textSize="60dp" />
 
 
         <Button
@@ -52,35 +52,23 @@
         android:background="@color/cardview_dark_background"
         android:text="Obnov"
         android:textAlignment="center"
+            android:textColor="#d0d9d7"
         android:textSize="30dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/cardview_dark_background"
-            android:text="Ulož"
-            android:textAlignment="center"
-            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="fill_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:background="@color/cardview_dark_background"
-            android:text="Načti"
+            android:text="Detaily"
             android:textAlignment="center"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textColor="#d0d9d7" />
     </LinearLayout>
 
 

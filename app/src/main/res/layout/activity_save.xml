@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    tools:context="com.mobile.petrk.pricecheck2.SaveActivity">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/dark_embroidery_repeating"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="487dp"
+            android:ems="10"
+            android:textColor="#d0d9d7"
+            android:scrollHorizontally="false"
+            android:inputType="textCapSentences|textMultiLine"
+            android:gravity="top|left" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cardview_dark_background"
+            android:text="Ulož"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="#d0d9d7" />
+    </LinearLayout>
+</LinearLayout>
+
